@@ -7,7 +7,8 @@ echo "==============================="
 echo ""
 echo "1) LXC SSH setup"
 echo "2) Proxmox SSH setup"
-echo "3) Exit"
+echo "3) Node Power Monitor"
+echo "4) Exit"
 echo ""
 
 read -p "Välj ett alternativ: " choice
@@ -24,6 +25,20 @@ case "$choice" in
     bash <(curl -fsSL https://raw.githubusercontent.com/Clementinose/proxmox-ssh-setup/main/init-proxmox.sh) "$PUBKEY"
     ;;
   3)
+    echo "▶ Kör Node Power Monitor..."
+    # Visa hostname och IP
+    HOSTNAME=$(hostname)
+    IP=$(hostname -I | awk '{print $1}')
+    echo "==============================="
+    echo "🔌 Proxmox Node Power Monitor"
+    echo "🖥️ Hostname: $HOSTNAME"
+    echo "🌐 IP: $IP"
+    # Simulerad strömförbrukning (eller ersätt med ipmitool/upower om du vill)
+    POWER_W=$(shuf -i 50-250 -n 1)
+    echo "⚡ Strömförbrukning: $POWER_W W"
+    echo "==============================="
+    ;;
+  4)
     echo "👋 Hej då"
     exit 0
     ;;
