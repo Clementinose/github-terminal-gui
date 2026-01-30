@@ -1,0 +1,2 @@
+curl -fsSL "https://raw.githubusercontent.com/Clementinose/github-terminal-gui/main/menu.sh?v=9" -o menu.sh
+sudo bash menu.sh
