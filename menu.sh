@@ -26,17 +26,7 @@ case "$choice" in
     ;;
   3)
     echo "▶ Kör Node Power Monitor..."
-    # Visa hostname och IP
-    HOSTNAME=$(hostname)
-    IP=$(hostname -I | awk '{print $1}')
-    echo "==============================="
-    echo "🔌 Proxmox Node Power Monitor"
-    echo "🖥️ Hostname: $HOSTNAME"
-    echo "🌐 IP: $IP"
-    # Simulerad strömförbrukning (eller ersätt med ipmitool/upower om du vill)
-    POWER_W=$(shuf -i 50-250 -n 1)
-    echo "⚡ Strömförbrukning: $POWER_W W"
-    echo "==============================="
+    bash <(curl -fsSL https://raw.githubusercontent.com/Clementinose/github-terminal-gui/main/monitor.sh)
     ;;
   4)
     echo "👋 Hej då"
