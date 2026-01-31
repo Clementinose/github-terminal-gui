@@ -26,7 +26,7 @@ case "$choice" in
     ;;
   3)
     echo "▶ Kör Node Power Monitor..."
-    bash <(curl -fsSL https://raw.githubusercontent.com/Clementinose/github-terminal-gui/main/monitor.sh)
+    bash <(curl -fsSL https://raw.githubusercontent.com/Clementinose/proxmox-node-power/main/monitor.sh)
     ;;
   4)
     echo "👋 Hej då"
