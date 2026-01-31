@@ -10,7 +10,8 @@ echo "2) Proxmox SSH setup"
 echo "3) Node Power Monitor"
 echo "4) Node Temperature Monitor"
 echo "5) Node Fan Monitor"
-echo "6) Exit"
+echo "6) Node Network Monitor"
+echo "7) Exit"
 echo ""
 
 read -p "Välj ett alternativ: " choice
@@ -39,6 +40,10 @@ case "$choice" in
     bash <(curl -fsSL https://raw.githubusercontent.com/Clementinose/proxmox-node-fans/main/fans.sh)
     ;;
   6)
+    echo "▶ Kör Node Network Monitor..."
+    bash <(curl -fsSL https://raw.githubusercontent.com/Clementinose/proxmox-node-network/main/network.sh)
+    ;;
+  7)
     echo "👋 Hej då"
     exit 0
     ;;
